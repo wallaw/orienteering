@@ -7,20 +7,28 @@
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Orientación</h1>
-    <table>
-        <tr>
-            <th>Codigo</th>
-            <th>Nome</th>
-            <th>Imagem</th>
-        </tr>
-        {% for item in items %}
-            <tr>
-                <td>{{ item.id }}</td>
-                <td>{{ item.name }}</td>
-                <td><img src="{{ item.url }}" alt="Imagem SVG"></td>
-            </tr>
-        {% endfor %}
-    </table>
+    <h1 style="text-align: center">Orientação</h1>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-2">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nome</th>
+                        <th>Imagem</th>
+                    </tr>
+                    {% for item in items %}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.name }}</td>
+                            <td><img src="{{ item.url }}" alt="Imagem SVG"></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </div>
 {% endblock %}

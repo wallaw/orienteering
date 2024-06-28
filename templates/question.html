@@ -2,28 +2,47 @@
 
 {% block head %}
 <title> Question </title>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('keydown', function(event) {
+            // Verifica se a tecla pressionada está entre '1' e '5'
+            if (event.key >= '1' && event.key <= '5') {
+                // Calcula o índice do radio button baseado na tecla pressionada
+                var index = parseInt(event.key);
+                if (index <= {{ answers|length }}) {  // Verifica se o índice está dentro do intervalo de respostas
+                    // Simular clique no radio button correspondente
+                    document.getElementById('answer' + index).click();
+                }
+            }
+        });
+    });
+</script>
 {% endblock %}
-
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Sinaletica</h1>
-    <h2>Pontos: {{points}}</h2>
-    <table>
-            <tr>
-                <td><img src="{{ question.url }}" alt="Imagem SVG"></td>
-            </tr>
-    </table>
+    <h1 class="text-center">Quiz</h1>
 
-    <div class="form">
-        <form action="/question" method="POST">
-            {% for answer in answers %}
-            <input type="radio" id="item" name="answer" value="{{answer}}">
-            <label for="item">{{answer}}</label><br>
-            {% endfor %}
-            <input type="submit" value="Enviar">
+    <div class="row justify-content-center">
+        <div class="col-md-2 text-center">
+            <h2>Pontos: {{ points }}</h2>
 
-        </form>
+            <div class="mx-auto" style="width: fit-content;">
+                <img src="{{ question.url }}" alt="Imagem SVG" class="img-fluid">
+            </div>
+
+            <div class="form">
+                <form action="/question" method="POST">
+                    {% for answer in answers %}
+                    <div class="form-check mb-3 d-flex ">
+                        <input class="form-check-input" type="radio" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
+                        <label class="form-check-label" for="answer{{ loop.index }}">{{  loop.index ~ ' - ' ~ answer }}</label>
+                    </div>
+                    {% endfor %}
+                    <input type="submit" class="btn btn-primary mt-3" value="Enviar">
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
