@@ -7,13 +7,18 @@
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Orientación</h1>
-    <table>
-        <tr>
-            <th><a href="{{ url_for('all_route') }}">Todos los controles</a></th>
-            <th><a href="{{ url_for('question_route') }}">Quiz</a></th>
-
-        </tr>
-    </table>
+    <h1 style="text-align: center">Orientação</h1>
+    <div class="row justify-content-center">
+        <div class="mx-auto" style="width: fit-content;">
+            <table class="table">
+                <tr>
+                    <th><a href="{{ url_for('all_route') }}"><i class="bi bi-card-list"> Sinalética completa </i></a></th>
+                </tr>
+                <tr>
+                    <th><a href="{{ url_for('question_route') }}"><i class="bi bi-patch-question"> Teste seus conhecimentos</i></a></th>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
 {% endblock %}

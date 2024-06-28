@@ -5,6 +5,13 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('keydown', function(event) {
+            console.log(event.key);
+
+            if (event.key === 'Enter') {
+                console.log("ENTER")
+                var elemento = document.getElementById('form').submit();
+            }
+
             // Verifica se a tecla pressionada está entre '1' e '5'
             if (event.key >= '1' && event.key <= '5') {
                 // Calcula o índice do radio button baseado na tecla pressionada
@@ -32,7 +39,7 @@
             </div>
 
             <div class="form">
-                <form action="/question" method="POST">
+                <form action="/question" method="POST" id="form">
                     {% for answer in answers %}
                     <div class="form-check mb-3 d-flex ">
                         <input class="form-check-input" type="radio" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
