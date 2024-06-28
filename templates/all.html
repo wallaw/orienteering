@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Orientación - Todos los controles</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Orientación</h1>
+    <table>
+        <tr>
+            <th>Codigo</th>
+            <th>Nome</th>
+            <th>Imagem</th>
+        </tr>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td><img src="{{ item.url }}" alt="Imagem SVG"></td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
