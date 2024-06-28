@@ -32,18 +32,18 @@
 
     <div class="row justify-content-center">
         <div class="col-md-2 text-center">
-            <h2>Pontos: {{ points }}</h2>
+            <h5>Pontos: {{ points }}</h5>
 
-            <div class="mx-auto" style="width: fit-content;">
+            <div class="mx-auto mb-2" style="width: fit-content;">
                 <img src="{{ question.url }}" alt="Imagem SVG" class="img-fluid">
             </div>
 
             <div class="form">
                 <form action="/question" method="POST" id="form">
                     {% for answer in answers %}
-                    <div class="form-check mb-3 d-flex ">
-                        <input class="form-check-input" type="radio" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
-                        <label class="form-check-label" for="answer{{ loop.index }}">{{  loop.index ~ ' - ' ~ answer }}</label>
+                    <div class="form-check mb-2 d-flex ">
+                        <input type="radio" class="btn-check" autocomplete="off" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
+                        <label class="btn w-100 text-start" for="answer{{ loop.index }}"><i class="bi bi-{{loop.index}}-circle"></i>  {{ answer }}</label>
                     </div>
                     {% endfor %}
                     <input type="submit" class="btn btn-primary mt-3" value="Enviar">
@@ -53,3 +53,5 @@
     </div>
 </div>
 {% endblock %}
+
+
