@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="15mm"
+   height="15mm"
+   viewBox="0 0 15 15"
+   version="1.1"
+   id="svg531"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="1.4 Earth bank.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview533"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="12.85679"
+     inkscape:cx="23.256194"
+     inkscape:cy="40.523334"
+     inkscape:window-width="1447"
+     inkscape:window-height="1053"
+     inkscape:window-x="230"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs528" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.997"
+       d="m 2.9087736,5.8106238 c 0,0 2.9870535,1.6376027 4.6203937,1.6317097 1.600676,-0.00578 4.5163367,-1.6317097 4.5163367,-1.6317097"
+       id="path8172"
+       sodipodi:nodetypes="cac" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.997"
+       d="M 4.1236034,6.3745445 3.1279332,8.4179237"
+       id="path8174" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.997"
+       d="M 6.4192583,7.3437905 5.88422,9.4878918"
+       id="path8176" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.997"
+       d="m 8.7503565,7.3595528 c 0.02195,0.1637615 0.081507,0.321469 0.081507,0.4875316"
+       id="path8178" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.997"
+       d="M 9.1966091,9.4748375 8.903391,7.4167229"
+       id="path8180" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.997"
+       d="m 11.033125,6.606288 0.859429,1.8726581"
+       id="path8182" />
+  </g>
+</svg>

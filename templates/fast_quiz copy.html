@@ -1,0 +1,56 @@
+    {% extends 'base.html' %}
+
+    {% block head %}
+    <title> Question </title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('keydown', function(event) {
+                console.log(event.key);
+
+                // if (event.key === 'Enter') {
+                //     console.log("ENTER")
+                //     var elemento = document.getElementById('form').submit();
+                // }
+
+                // Verifica se a tecla pressionada está entre '1' e '5'
+                if (event.key >= '1' && event.key <= '5') {
+                    // Calcula o índice do radio button baseado na tecla pressionada
+                    var index = parseInt(event.key);
+                    if (index <= {{ answers|length }}) {  // Verifica se o índice está dentro do intervalo de respostas
+                        // Simular clique no radio button correspondente
+                        document.getElementById('answer' + index).click();
+                    }
+                }
+            });
+        });
+    </script>
+    {% endblock %}
+
+    {% block body %}
+    <div class="content">
+        <h1 class="text-center">Quiz</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-md-2 text-center">
+                <h5>Pontos: {{ points }}</h5>
+
+                <div class="mx-auto mb-2" style="width: fit-content;">
+                    <img src="{{ question.url }}" alt="Imagem SVG" class="img-fluid">
+                </div>
+
+                <div class="form">
+                    <form action="/fast_quiz" method="POST" id="form">
+                        {% for answer in answers %}
+                        <div class="form-check mb-2 d-flex">
+                            <input type="radio" class="btn-check" id="radio{{ loop.index }}" name="answer" value="{{ answer }}">
+                            <button type="submit" class="btn btn-outline-dark"><i class="bi bi-{{loop.index}}-circle"></i> {{ answer }}</button>
+                        </div>
+                        {% endfor %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+

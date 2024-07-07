@@ -18,6 +18,7 @@
                 var index = parseInt(event.key);
                 if (index <= {{ answers|length }}) {  // Verifica se o índice está dentro do intervalo de respostas
                     // Simular clique no radio button correspondente
+                    
                     document.getElementById('answer' + index).click();
                 }
             }
@@ -39,11 +40,11 @@
             </div>
 
             <div class="form">
-                <form action="/question" method="POST" id="form">
+                <form action="/quiz_sinaletica" method="POST" id="form">
                     {% for answer in answers %}
-                    <div class="form-check mb-2 d-flex ">
+                    <div class="form-check mb-2 ">
                         <input type="radio" class="btn-check" autocomplete="off" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
-                        <label class="btn w-100 text-start" for="answer{{ loop.index }}"><i class="bi bi-{{loop.index}}-circle"></i>  {{ answer }}</label>
+                        <label class="btn w-80 text-start" for="answer{{ loop.index }}"><i class="bi bi-{{loop.index}}-circle"></i>  {{ answer }}</label>
                     </div>
                     {% endfor %}
                     <input type="submit" class="btn btn-primary mt-3" value="Enviar">
